@@ -45,12 +45,13 @@ a:visited,
     border-radius: 6px;
   }
   
-  button {
+  * button {
     border: none;
     outline: none;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
   }
   
   .noscroll {

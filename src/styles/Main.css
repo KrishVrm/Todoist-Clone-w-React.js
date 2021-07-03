@@ -51,7 +51,7 @@ input, select, textarea {
   border-radius: 6px;
 }
 
-button {
+* button {
   border: none;
   outline: none;
   cursor: pointer;
@@ -60,6 +60,7 @@ button {
       -ms-user-select: none;
           user-select: none;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .noscroll {
@@ -140,9 +141,11 @@ button {
   border: 2px solid #de4c4a;
 }
 
-.primary_btn:hover {
-  background: none;
-  border: 2px solid #de4c4a;
+@media (hover: hover) and (pointer: fine) {
+  .primary_btn:hover {
+    background: none;
+    border: 2px solid #de4c4a;
+  }
 }
 
 .secondary_btn {
@@ -150,8 +153,10 @@ button {
   border: 2px solid transparent;
 }
 
-.secondary_btn:hover {
-  background: #de4c4a;
+@media (hover: hover) and (pointer: fine) {
+  .secondary_btn:hover {
+    background: #de4c4a;
+  }
 }
 
 .tertiary_btn {
@@ -159,8 +164,10 @@ button {
   padding: .2rem .3rem;
 }
 
-.tertiary_btn:hover {
-  background: #363636;
+@media (hover: hover) and (pointer: fine) {
+  .tertiary_btn:hover {
+    background: #363636;
+  }
 }
 
 .taskInput {
@@ -438,8 +445,10 @@ header nav .left, header nav .right {
   color: white;
 }
 
-.container .inputs-btns-container .addtaskbtn:hover {
-  color: #de4c4a;
+@media (hover: hover) and (pointer: fine) {
+  .container .inputs-btns-container .addtaskbtn:hover {
+    color: #de4c4a;
+  }
 }
 
 .todos-container {
@@ -482,11 +491,13 @@ header nav .left, header nav .right {
   transition: .2s;
 }
 
-.todo-container svg:hover {
-  border-radius: 50px;
-  background: #363636;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+@media (hover: hover) and (pointer: fine) {
+  .todo-container svg:hover {
+    border-radius: 50px;
+    background: #363636;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 
 .todo-container .task {

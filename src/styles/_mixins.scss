@@ -13,6 +13,12 @@
     align-items: center;
     flex-direction: $fd;
   }
+
+  @mixin supportHover {
+    @media (hover: hover) and (pointer: fine){
+      @content
+    }
+  };
   
   //$ Breakpoints
   @media (min-width: 64em) {

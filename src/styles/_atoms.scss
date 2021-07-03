@@ -51,25 +51,31 @@
 .primary_btn{
     background: $btns;
     border: 2px solid $btns;
-    &:hover{
-        background: none;
-        border: 2px solid $btns;
+    @include supportHover{
+        &:hover{
+            background: none;
+            border: 2px solid $btns;
+        }
     }
 }
 
 .secondary_btn{
     background: none;
     border: 2px solid transparent;
-    &:hover{
-        background: $btns;
+    @include supportHover {
+        &:hover{
+             background: $btns;
+         }
     }
 }
 
 .tertiary_btn{
     background: none;
     padding: .2rem .3rem;
-    &:hover{
-        background: $dark-hover;
+    @include supportHover {
+        &:hover{
+            background: $dark-hover;
+        }
     }
 }
 
