@@ -1,0 +1,95 @@
+.svg-btns{
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: .1rem;
+    border-radius: 6px;
+    transition: all .2s;
+    &:hover{
+        background: $dark-hover;
+    }
+}
+
+
+.search-input-container{
+    background: $dark-hover;
+    border-radius: 6px;
+    @include flex-box(row, center, center, nowrap);
+    padding: 0 .3rem;
+    svg{
+        opacity: .4;
+    }
+}
+
+.search_input{
+    @extend .search-input-container;
+    padding: .3rem;
+    width: 10rem;
+    transition: all .3s;
+    &:focus{
+        animation-name: inputFocus;
+        animation-duration: .3s;
+        width: 12rem;
+        
+    }
+}
+
+.links{
+    background: $dark-hover;
+    color: white;
+    border-radius: 6px;
+    padding: .3rem 5rem;
+}
+
+.primary_btn, .secondary_btn, .tertiary_btn{
+    color:white;
+    padding: .2rem .6rem;
+    transition: all 150ms ease-in-out;
+    border-radius: 6px;
+}
+
+.primary_btn{
+    background: $btns;
+    border: 2px solid $btns;
+    &:hover{
+        background: none;
+        border: 2px solid $btns;
+    }
+}
+
+.secondary_btn{
+    background: none;
+    border: 2px solid transparent;
+    &:hover{
+        background: $btns;
+    }
+}
+
+.tertiary_btn{
+    background: none;
+    padding: .2rem .3rem;
+    &:hover{
+        background: $dark-hover;
+    }
+}
+
+.taskInput{
+    max-width: 100%;
+    min-width: 100%;
+    background: $dark-menu-bg; 
+    padding: .5rem .8rem;
+    resize: none;
+}
+
+.ticked{
+    background: $btns;
+    border-radius: 50px;
+    fill: white;
+}
+
+.home{
+    margin-top: 6rem;
+}
+.homeSvg{
+    display: none;
+}

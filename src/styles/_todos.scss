@@ -1,0 +1,108 @@
+.container{
+    margin: 2rem 15rem;
+    @include breakpoint-down(medium){
+        margin: 2rem 4rem;
+    }
+    @include breakpoint-down(small){
+        margin: 2rem 1rem;
+    }
+
+    .clearBtnContainer, .sortBtnContainer{
+        @include flex-box(row, center, center, nowrap);
+        cursor: pointer;
+    }
+    .title-container{
+        @include flex-box(row, space-between, center, nowrap);
+        gap: 12px;
+
+        & :nth-child(2){
+            margin-left: auto;
+        }
+        .sort-container{
+            position: relative;
+            .toggleOptionsBox{
+                @include flex-box(column, flex-start, center, nowrap);
+                box-shadow: 0px 1px 4px 2px rgb(24, 24, 24);
+                width: 12rem;
+                gap: 12px;
+                padding: 1rem;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: absolute;
+                left: -150px;
+                top: 35px;
+                background: $dark-menu-bg;
+                z-index: 3;
+                & :nth-child(2){
+                    margin-left: 0;
+                }
+                button{
+                    width: 100%;
+                    text-align: start;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .inputs-btns-container{
+        margin: 1.1rem 0;
+        gap: 12px;
+        .input-container{
+            @include flex-box(column, flex-start, flex-start, nowrap);
+            gap: 12px;
+            .btns-container{
+                display: flex;
+                gap: 12px;
+            }
+        }
+        .addtaskbtn{
+            @include flex-box(row, flex-start, center, nowrap);
+            font-size: 13px;
+            width: 100%;
+            cursor: pointer;
+            transition: all .2s;
+            gap: 4px;
+            background: none;
+            color: white;
+            &:hover{
+                color: $btns;
+            }
+        }
+    }
+}
+
+.todos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.todo-container{
+    display: grid;
+    grid-template-columns: auto 90% auto auto;
+    position: relative;
+    justify-content: space-between;
+    gap: 2px;
+    margin-top: .8rem;
+    z-index: 2;
+    @include breakpoint-down(small){
+        grid-template-columns: auto 75% auto auto;
+    }
+    svg{
+        font-size: 22px;
+        padding: .1rem;
+        cursor: pointer;
+        transition: .2s;
+        &:hover{
+            border-radius: 50px;
+            background: $dark-hover;
+            transform: scale(1.2);
+        }
+    }
+    
+    .task{
+        height: auto;
+        word-break: break-all;
+    }
+}

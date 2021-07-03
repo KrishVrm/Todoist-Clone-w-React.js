@@ -1,0 +1,36 @@
+@keyframes inputFocus{
+    0%{
+        width: 10rem;
+    }
+    100%{
+        width: 12rem;
+    }
+}
+
+.open_sidenav{
+    animation-name: openNav;
+    animation-duration: 200ms;
+}
+
+.close_sideNav{
+    animation-name: closeNav;
+    animation-duration: 200ms;
+}
+
+@keyframes openNav {
+    0%{
+       left: -13rem; 
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes closeNav {
+    0%{
+       left: 0; 
+    }
+    100%{
+        left: -13rem;
+    }
+}

@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+@import 'globals';
+@import 'atoms';
+@import 'header';
+@import 'menu';
+@import 'todos';
+@import 'animations';
+
+body{
+    background: $dark-bg;
+    color: $dark-text-color;
+}

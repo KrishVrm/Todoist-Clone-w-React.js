@@ -1,0 +1,16 @@
+header{
+    background-color: $dark-menu-bg;
+    padding: .7rem 2rem;
+    box-shadow: 0px 1px $dark-bg;
+    @include breakpoint-down(small){
+        padding: .7rem 1rem;
+    }
+    nav{
+        @include flex-box(row, space-between, center, nowrap);
+
+        .left, .right{
+            @include flex-box(row, center, center, nowrap);
+            gap: .6rem;
+        }
+    }
+}
